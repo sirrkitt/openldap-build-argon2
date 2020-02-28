@@ -14,4 +14,6 @@ RUN     cd aports/main/openldap &&\
         abuild -F build
 RUN     cp -R /usr/src/openldap/contrib/slapd-modules/passwd/argon2 /usr/src/aports/main/openldap/src/openldap-2.4.48/contrib/slapd-modules/passwd/argon2 &&\
         cd /usr/src/aports/main/openldap/src/openldap-2.4.48/contrib/slapd-modules/passwd/argon2 &&\
-        make && make install
+        make &&\
+        make install &&\
+        rm -r /usr/src/*
